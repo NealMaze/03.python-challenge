@@ -1,6 +1,7 @@
 
 import csv
 import statistics as st
+
 csvFile = open('resources/budget_data.csv')
 reader = csv.reader(csvFile, delimiter=',')
 data = list(reader)
