@@ -16,7 +16,3 @@ Don't contribute to this steaming pile of code.
 You have been warned.
 
 commit
-commit
-commit
-commit
-commit
