@@ -31,15 +31,15 @@ def finishProgram():
 for line in data:
     totalMonths = totalMonths + 1
     sumCoffers = sumCoffers + int(line[1])
-    change = int(previousCoffers) - int(line[1])
-    previousCoffers = int(line[1])
+    change = int(line[1]) - int(previousCoffers)
     changeList.append(change)
-    if int(line[1]) > greatestIncrease:
-        greatestIncrease = int(line[1])
+    if change > greatestIncrease:
+        greatestIncrease = change
         increaseMonth = line[0]
-    if int(line[1]) < greatestDecrease:
-        greatestDecrease = int(line[1])
+    if change < greatestDecrease:
+        greatestDecrease = change
         decreaseMonth = line[0]
+    previousCoffers = int(line[1])
 
 averageChange = st.mean(changeList)
 
